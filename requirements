@@ -1,0 +1,9 @@
+# Requirements for api.buttoncorp.org
+
+1. Way to recieve notification from frontend users (exposed API endpoint, rocket?)
+  A. Track a separate randomly-generated cookie to validate single-use as much as possible
+2. Way to store responses from each day, and then cache over on new day (local file database preferred, memory database can function)
+3. Heartbeat API (for server outage page because funny)
+4. Method to alert to discord reports and current usages (webhooks or bot, webhooks probably)
+
+rotate button_pressed cookie, with the date the button started. modify cookie, don't overwrite, set expiration much longer (a week?)
