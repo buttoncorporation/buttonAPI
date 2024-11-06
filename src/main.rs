@@ -108,6 +108,7 @@ fn rocket() -> _ {
         .mount("/", routes![index])
         .mount("/", routes![open])
         .mount("/", routes![read, press])
+        .attach(CORS)
 }
 
 // Transforms timestamp into a timestamp string
